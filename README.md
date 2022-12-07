@@ -33,10 +33,18 @@ We will wrap up the workshop by taking everything learned and combining it with 
 
 ## Repo Tour
 
-To correctly run each module, `cd` into the checkpoint you'd like to work on, run the command `npm install` to install the required packages, and finally, run the command `npm start` to start the web server.
+To correctly run each module, `cd` into the `my-app` folder, correctly import and call the module you'd like to work on, and finally, run the command `npm start` to start the web server.
 
-- `./checkpoints`:
+- `./notes`:
   - Inside you will find a folder for each module of the workshop that we will be covering
+  - `./notes/init.md`:
+    - Initialization instructions on how to create a new react app
+  - `./notes/my-app`:
+    - Initialized react app that we will be using for notes
+    - `./notes/my-app/src`:
+      - The files that you edit when you are building a react app
+      - `./notes/my-app/src/modules`:
+        - All of the notes that will be presented during the workshop
 - `./project` (solution branch only):
   - The code to reference during the building portion of the workshop
 - `./.gitignore`:
