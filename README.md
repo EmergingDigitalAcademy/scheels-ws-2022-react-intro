@@ -31,6 +31,19 @@ The content we will be going over will include:
 
 We will wrap up the workshop by taking everything learned and combining it with create-react-app to build an E-Commerce Single Page Application (SPA)!
 
+## Repo Tour
+
+To correctly run each module, `cd` into the checkpoint you'd like to work on, run the command `npm install` to install the required packages, and finally, run the command `npm start` to start the web server.
+
+- `./checkpoints`:
+  - Inside you will find a folder for each module of the workshop that we will be covering
+- `./project` (solution branch only):
+  - The code to reference during the building portion of the workshop
+- `./.gitignore`:
+  - Hiding node modules and package-lock files from git
+- `./README.md`:
+  - Project introduction
+
 ## Resources
 
 Different resources that will be helpful throughout the workshop:
