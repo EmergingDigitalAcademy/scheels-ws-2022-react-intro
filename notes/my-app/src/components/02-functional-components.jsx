@@ -5,21 +5,21 @@ import React, { useState } from "react";
 export default function FunctionalComponents() {
   const [classMountState, setClassMountState] = useState(false);
 
-  const Emb = ({ text }) => {
+  const Emb = (props) => {
     return (
       <b>
-        <em>{text}</em>
+        <em>{props.children}</em>
       </b>
     );
   };
 
   const classComponentString = `class ClassComponent extends React.Component {
     render() {
-      return "<p>Class inspect me!</p>";
+      return <p>Class inspect me!</p>;
     }
 }`;
-  const funcComponentString = `function FuncComponent () {
-    return "<p>Function inspect me!</p>";
+  const funcComponentString = `function FuncComponent() {
+    return <p>Function inspect me!</p>;
 }`;
 
   const mountExampleString = `class ClassMountExample extends React.Component {
@@ -34,7 +34,7 @@ export default function FunctionalComponents() {
   }
 
   render() {
-    return "<p>I will console log 'Hello World' when rendered, and 'I am unmounted' when destroyed!</p>";
+    return <p>I will console log 'Hello World' when rendered, and 'I am unmounted' when destroyed!</p>;
   }
 }`;
 
@@ -73,7 +73,7 @@ export default function FunctionalComponents() {
     <div className="container">
       <h2>Functional vs Class Components</h2>
       <p>
-        <Emb text="What is a component?" />
+        <Emb>What is a component?</Emb>
         &nbsp; "Components are independent and reusable bits of code. They serve
         the same purpose as JavaScript Functions, but work in isolation and
         return HTML." <em>&mdash; W3 Schools</em>
@@ -84,7 +84,7 @@ export default function FunctionalComponents() {
 
       <div id="colWrapper">
         <div>
-          <Emb text="Key Concepts:" />
+          <Emb>Key Concepts:</Emb>
           <ul>
             <li>Reusable</li>
             <li>Work in isolation</li>
@@ -93,55 +93,54 @@ export default function FunctionalComponents() {
 
           <br />
 
-          <Emb text="Class Component:" />
+          <Emb>Class Components:</Emb>
 
           <br />
 
           <SyntaxHighlighter
             className="codeHighlight"
-            language="javascript"
+            language="jsx"
             style={vscDarkPlus}
           >
             {classComponentString}
           </SyntaxHighlighter>
 
-          <Emb text="Output:" />
+          <Emb>Output:</Emb>
           <ClassComponent />
 
           <br />
 
-          <Emb text="Functional Component:" />
+          <Emb>Functional Components:</Emb>
 
           <br />
 
           <SyntaxHighlighter
             className="codeHighlight"
-            language="javascript"
+            language="jsx"
             style={vscDarkPlus}
           >
             {funcComponentString}
           </SyntaxHighlighter>
 
-          <Emb text="Output:" />
+          <Emb>Output:</Emb>
           <FuncComponent />
         </div>
 
         <hr />
 
         <div>
-          <Emb text="So what is the difference?" />
+          <Emb>So what is the difference?</Emb>
           <ul>
             <li>Functional Components require less code</li>
             <li>
-              Class Components extend from the <Emb text="React.Component" />{" "}
+              Class Components extend from the <Emb>React.Component</Emb>{" "}
               module, functions are built from nothing
             </li>
             <li>Functional Components are stateless</li>
             <li>
-              Functional Components don't have access to{" "}
-              <Emb text="setState()" /> and <Emb text="lifecycle methods" />{" "}
-              (lifecycle methods are extended from{" "}
-              <Emb text="React.Component" />)
+              Functional Components don't have access to <Emb>setState()</Emb>{" "}
+              and <Emb>lifecycle methods</Emb> (lifecycle methods are extended
+              from <Emb>React.Component</Emb>)
               <ul>
                 <em>
                   <li>
@@ -160,20 +159,20 @@ export default function FunctionalComponents() {
 
           <br />
 
-          <Emb text="Class Component Lifecycle Methods:" />
+          <Emb>Class Component Lifecycle Methods:</Emb>
 
           <br />
 
           <SyntaxHighlighter
             className="codeHighlight"
-            language="javascript"
+            language="jsx"
             style={vscDarkPlus}
           >
             {mountExampleString}
           </SyntaxHighlighter>
 
           <button onClick={() => setClassMountState(!classMountState)}>
-            Render Component
+            {classMountState ? "Unmount Component" : "Mount Component"}
           </button>
 
           <br />
@@ -181,7 +180,7 @@ export default function FunctionalComponents() {
 
           {classMountState && (
             <>
-              <Emb text="Output:" />
+              <Emb>Output:</Emb>
               <ClassMountExample />
             </>
           )}

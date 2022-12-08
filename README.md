@@ -20,9 +20,9 @@ The content we will be going over will include:
 
 - React Initialization and JSX
 - Class Components vs Functional Components
+- State
 - Props
 - Hooks
-- State
 - Conditional Rendering
 - List Rendering
 - React Router
@@ -31,7 +31,7 @@ We will wrap up the workshop by taking everything learned and combining it with 
 
 ## Repo Tour
 
-To correctly run each module, `cd` into the `my-app` folder, correctly import and call the module you'd like to work on, and finally, run the command `npm start` to start the web server.
+To render each each component, `cd` into the `my-app` folder, import and call the component you'd like to work on, and finally, run the command `npm start` to start the web server.
 
 - `./notes`:
   - Inside you will find a folder for each module of the workshop that we will be covering
