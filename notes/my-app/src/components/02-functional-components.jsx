@@ -5,6 +5,14 @@ import React, { useState } from "react";
 export default function FunctionalComponents() {
   const [classMountState, setClassMountState] = useState(false);
 
+  const Emb = ({ text }) => {
+    return (
+      <b>
+        <em>{text}</em>
+      </b>
+    );
+  };
+
   const classComponentString = `class ClassComponent extends React.Component {
     render() {
       return "<p>Class inspect me!</p>";
@@ -65,9 +73,7 @@ export default function FunctionalComponents() {
     <div className="container">
       <h2>Functional vs Class Components</h2>
       <p>
-        <b>
-          <em>What is a component?</em>
-        </b>
+        <Emb text="What is a component?" />
         &nbsp; "Components are independent and reusable bits of code. They serve
         the same purpose as JavaScript Functions, but work in isolation and
         return HTML." <em>&mdash; W3 Schools</em>
@@ -78,9 +84,7 @@ export default function FunctionalComponents() {
 
       <div id="colWrapper">
         <div>
-          <b>
-            <em>Key concepts:</em>
-          </b>
+          <Emb text="Key Concepts:" />
           <ul>
             <li>Reusable</li>
             <li>Work in isolation</li>
@@ -89,9 +93,7 @@ export default function FunctionalComponents() {
 
           <br />
 
-          <b>
-            <em>Class Component:</em>
-          </b>
+          <Emb text="Class Component:" />
 
           <br />
 
@@ -103,14 +105,12 @@ export default function FunctionalComponents() {
             {classComponentString}
           </SyntaxHighlighter>
 
-          <b>Output:</b>
+          <Emb text="Output:" />
           <ClassComponent />
 
           <br />
 
-          <b>
-            <em>Functional Component:</em>
-          </b>
+          <Emb text="Functional Component:" />
 
           <br />
 
@@ -122,40 +122,26 @@ export default function FunctionalComponents() {
             {funcComponentString}
           </SyntaxHighlighter>
 
-          <b>Output:</b>
+          <Emb text="Output:" />
           <FuncComponent />
         </div>
 
         <hr />
 
         <div>
-          <b>
-            <em>So what is the difference?</em>
-          </b>
+          <Emb text="So what is the difference?" />
           <ul>
             <li>Functional Components require less code</li>
             <li>
-              Class Components extend from the{" "}
-              <b>
-                <em>React.Component</em>
-              </b>{" "}
+              Class Components extend from the <Emb text="React.Component" />{" "}
               module, functions are built from nothing
             </li>
             <li>Functional Components are stateless</li>
             <li>
               Functional Components don't have access to{" "}
-              <b>
-                <em>setState()</em>
-              </b>{" "}
-              and{" "}
-              <b>
-                <em>lifecycle methods</em>
-              </b>{" "}
+              <Emb text="setState()" /> and <Emb text="lifecycle methods" />{" "}
               (lifecycle methods are extended from{" "}
-              <b>
-                <em>React.Component</em>
-              </b>
-              )
+              <Emb text="React.Component" />)
               <ul>
                 <em>
                   <li>
@@ -174,9 +160,7 @@ export default function FunctionalComponents() {
 
           <br />
 
-          <b>
-            <em>Class Component Lifecycle Methods:</em>
-          </b>
+          <Emb text="Class Component Lifecycle Methods:" />
 
           <br />
 
@@ -197,7 +181,7 @@ export default function FunctionalComponents() {
 
           {classMountState && (
             <>
-              <b>Output:</b>
+              <Emb text="Output:" />
               <ClassMountExample />
             </>
           )}
