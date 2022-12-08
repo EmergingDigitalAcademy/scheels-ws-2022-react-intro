@@ -18,7 +18,7 @@ Hello, and welcome to the Emerging Digital Academy: React Refresh Workshop. Toda
 
 The content we will be going over will include:
 
-- React Initialization and JSX
+- React Getting Started
 - Class Components vs Functional Components
 - State
 - Props

@@ -2,24 +2,18 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import React, { useState } from "react";
 
+import Bem from "./reused-components/Bem";
+
 export default function FunctionalComponents() {
   const [classMountState, setClassMountState] = useState(false);
 
-  const Emb = (props) => {
-    return (
-      <b>
-        <em>{props.children}</em>
-      </b>
-    );
-  };
-
   const classComponentString = `class ClassComponent extends React.Component {
-    render() {
-      return <p>Class inspect me!</p>;
-    }
+  render() {
+    return <p>Class inspect me!</p>;
+  }
 }`;
   const funcComponentString = `function FuncComponent() {
-    return <p>Function inspect me!</p>;
+  return <p>Function inspect me!</p>;
 }`;
 
   const mountExampleString = `class ClassMountExample extends React.Component {
@@ -73,27 +67,34 @@ export default function FunctionalComponents() {
     <div className="container">
       <h2>Functional vs Class Components</h2>
       <p>
-        <Emb>What is a component?</Emb>
+        <Bem>What is a component?</Bem>
         &nbsp; "Components are independent and reusable bits of code. They serve
         the same purpose as JavaScript Functions, but work in isolation and
-        return HTML." <em>&mdash; W3 Schools</em>
+        return HTML."{" "}
+        <em>
+          &mdash;{" "}
+          <a href="https://www.w3schools.com/react/react_components.asp">
+            W3 Schools
+          </a>
+        </em>
       </p>
 
       <hr />
       <br />
 
-      <div id="colWrapper">
+      <div className="colWrapper">
         <div>
-          <Emb>Key Concepts:</Emb>
+          <Bem>Key Concepts:</Bem>
           <ul>
             <li>Reusable</li>
             <li>Work in isolation</li>
             <li>Return HTML</li>
           </ul>
 
+          <hr />
           <br />
 
-          <Emb>Class Components:</Emb>
+          <Bem>Class Components:</Bem>
 
           <br />
 
@@ -105,12 +106,12 @@ export default function FunctionalComponents() {
             {classComponentString}
           </SyntaxHighlighter>
 
-          <Emb>Output:</Emb>
+          <Bem>Output:</Bem>
           <ClassComponent />
 
           <br />
 
-          <Emb>Functional Components:</Emb>
+          <Bem>Functional Components:</Bem>
 
           <br />
 
@@ -122,25 +123,25 @@ export default function FunctionalComponents() {
             {funcComponentString}
           </SyntaxHighlighter>
 
-          <Emb>Output:</Emb>
+          <Bem>Output:</Bem>
           <FuncComponent />
         </div>
 
         <hr />
 
         <div>
-          <Emb>So what is the difference?</Emb>
+          <Bem>So what is the difference?</Bem>
           <ul>
             <li>Functional Components require less code</li>
             <li>
-              Class Components extend from the <Emb>React.Component</Emb>{" "}
+              Class Components extend from the <Bem>React.Component</Bem>{" "}
               module, functions are built from nothing
             </li>
             <li>Functional Components are stateless</li>
             <li>
-              Functional Components don't have access to <Emb>setState()</Emb>{" "}
-              and <Emb>lifecycle methods</Emb> (lifecycle methods are extended
-              from <Emb>React.Component</Emb>)
+              Functional Components don't have access to <Bem>setState()</Bem>{" "}
+              and <Bem>lifecycle methods</Bem> (lifecycle methods are extended
+              from <Bem>React.Component</Bem>)
               <ul>
                 <em>
                   <li>
@@ -157,9 +158,10 @@ export default function FunctionalComponents() {
             </li>
           </ul>
 
+          <hr />
           <br />
 
-          <Emb>Class Component Lifecycle Methods:</Emb>
+          <Bem>Class Component Lifecycle Methods:</Bem>
 
           <br />
 
@@ -180,7 +182,7 @@ export default function FunctionalComponents() {
 
           {classMountState && (
             <>
-              <Emb>Output:</Emb>
+              <Bem>Output:</Bem>
               <ClassMountExample />
             </>
           )}

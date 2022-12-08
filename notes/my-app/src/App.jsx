@@ -1,6 +1,6 @@
 import edaLogo from "./static/eda-logo-purple.png";
 import FunctionalComponents from "./components/02-functional-components";
-import InitAndJsx from "./components/01-init-and-jsx";
+import GettingStarted from "./components/01-getting-started";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
           <img src={edaLogo} alt="EDA Logo" id="edaLogo" />
         </header>
         <div>
-          <InitAndJsx />
+          <GettingStarted />
           <FunctionalComponents />
         </div>
       </div>
