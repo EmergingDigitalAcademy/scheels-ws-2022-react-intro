@@ -1,5 +1,5 @@
 import edaLogo from "./static/eda-logo-purple.png";
-import FunctionalComponents from "./modules/02-functional-components";
+import FunctionalComponents from "./components/02-functional-components";
 
 function App() {
   return (

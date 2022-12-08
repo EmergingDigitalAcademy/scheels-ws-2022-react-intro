@@ -41,7 +41,7 @@ To correctly run each module, `cd` into the `my-app` folder, correctly import an
     - Initialized react app that we will be using for notes
     - `./notes/my-app/src`:
       - The files that you edit when you are building a react app
-      - `./notes/my-app/src/modules`:
+      - `./notes/my-app/src/components`:
         - All of the notes that will be presented during the workshop
       - `./notes/my-app/src/static`:
         - Static files including CSS and images
@@ -52,7 +52,7 @@ To correctly run each module, `cd` into the `my-app` folder, correctly import an
 - `./project` (solution branch only):
   - The code to reference during the building portion of the workshop
 - `./.gitignore`:
-  - Hiding node modules and package-lock files from git
+  - Hiding node_modules and package-lock files from git
 - `./README.md`:
   - Project introduction
 
