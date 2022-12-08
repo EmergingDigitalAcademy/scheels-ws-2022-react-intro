@@ -35,14 +35,14 @@ To render each each component, `cd` into the `my-app` folder, import and call th
 
 - `./notes`:
   - Inside you will find a folder for each module of the workshop that we will be covering
-  - `./notes/init.md`:
-    - Initialization instructions on how to create a new react app
   - `./notes/my-app`:
     - Initialized react app that we will be using for notes
     - `./notes/my-app/src`:
       - The files that you edit when you are building a react app
       - `./notes/my-app/src/components`:
         - All of the notes that will be presented during the workshop
+        - `./notes/my-app/src/components/reused-components`:
+          - Custom components that are shared across the application
       - `./notes/my-app/src/static`:
         - Static files including CSS and images
       - `./notes/my-app/src/index.js`:

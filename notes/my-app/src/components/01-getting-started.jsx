@@ -30,7 +30,7 @@ npm start`;
 
   return (
     <div className="container">
-      <h2>Getting Started wtih React</h2>
+      <h2>Getting Started with React</h2>
       <p>
         <Bem>What is React?</Bem>
         &nbsp; "React is a JavaScript library for building user interfaces."{" "}
@@ -60,7 +60,7 @@ npm start`;
               <li>
                 <em>
                   If you have previously installed <b>create-react-app</b>{" "}
-                  globably, uninstall the package through npm or yarn first.
+                  globally, uninstall the package through npm or yarn first.
                   This is to ensure that npx is always using the latest versions
                   of create-react-app.
                 </em>
@@ -124,7 +124,7 @@ npm start`;
           </SyntaxHighlighter>
 
           <p>
-            Is this <Bem>JavsScript?</Bem> Is this <Bem>HTML?</Bem> It's
+            Is this <Bem>JavaScript?</Bem> Is this <Bem>HTML?</Bem> It's
             actually neither!
             <br />
             <br />
@@ -193,7 +193,7 @@ npm start`;
             <br />
             <br />
             This example declares a boolean in a new{" "}
-            <Bem>functional component,</Bem> initializes a conditonal based on
+            <Bem>functional component,</Bem> initializes a conditional based on
             the bool variable, and renders a <Bem>&lt;p&gt;</Bem> element with
             the text of <Bem>This</Bem> or <Bem>That</Bem> based on the result
             of the condition.
