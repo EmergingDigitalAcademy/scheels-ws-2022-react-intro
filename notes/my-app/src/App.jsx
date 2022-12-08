@@ -4,13 +4,18 @@ import FunctionalComponents from "./modules/02-functional-components";
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>React Functional Refresh</h1>
-        <img src={edaLogo} alt="EDA Logo" id="edaLogo" />
-      </header>
-      <div className="container">
-        <FunctionalComponents />
+      <div id="content">
+        <header>
+          <h1>React Functional Refresh</h1>
+          <img src={edaLogo} alt="EDA Logo" id="edaLogo" />
+        </header>
+        <div>
+          <FunctionalComponents />
+        </div>
       </div>
+      <footer>
+        <b>Powered by Emerging Digital Academy, 2022</b>
+      </footer>
     </div>
   );
 }

@@ -45,6 +45,12 @@ To correctly run each module, `cd` into the `my-app` folder, correctly import an
       - The files that you edit when you are building a react app
       - `./notes/my-app/src/modules`:
         - All of the notes that will be presented during the workshop
+      - `./notes/my-app/src/static`:
+        - Static files including CSS and images
+      - `./notes/my-app/src/index.js`:
+        - The root file of our project
+      - `./notes/my-app/src/App.jsx`:
+        - The root file for the React application
 - `./project` (solution branch only):
   - The code to reference during the building portion of the workshop
 - `./.gitignore`:

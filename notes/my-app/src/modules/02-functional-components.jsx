@@ -7,11 +7,11 @@ export default function FunctionalComponents() {
 
   const classComponentString = `class ClassComponent extends React.Component {
     render() {
-      return <p>Class Hello World</p>;
+      return "<p>Class inspect me!</p>";
     }
 }`;
   const funcComponentString = `function FuncComponent () {
-    return <p>Function Hello World</p>;
+    return "<p>Function inspect me!</p>";
 }`;
 
   const mountExampleString = `class ClassMountExample extends React.Component {
@@ -26,18 +26,18 @@ export default function FunctionalComponents() {
   }
 
   render() {
-    return <p>I will console log 'Hello World' when called!</p>;
+    return "<p>I will console log 'Hello World' when rendered, and 'I am unmounted' when destroyed!</p>";
   }
 }`;
 
   class ClassComponent extends React.Component {
     render() {
-      return <p>Class Hello World</p>;
+      return <p>Class inspect me!</p>;
     }
   }
 
   function FuncComponent() {
-    return <p>Function Hello World</p>;
+    return <p>Function inspect me!</p>;
   }
 
   class ClassMountExample extends React.Component {
@@ -52,12 +52,17 @@ export default function FunctionalComponents() {
     }
 
     render() {
-      return <p>I will console log 'Hello World' when called!</p>;
+      return (
+        <p>
+          I will console log 'Hello World' when rendered, and 'I am unmounted'
+          when destroyed!
+        </p>
+      );
     }
   }
 
   return (
-    <div>
+    <div className="container">
       <h2>Functional vs Class Components</h2>
       <p>
         <b>
@@ -68,6 +73,7 @@ export default function FunctionalComponents() {
         return HTML." <em>&mdash; W3 Schools</em>
       </p>
 
+      <hr />
       <br />
 
       <div id="colWrapper">
@@ -119,6 +125,9 @@ export default function FunctionalComponents() {
           <b>Output:</b>
           <FuncComponent />
         </div>
+
+        <hr />
+
         <div>
           <b>
             <em>So what is the difference?</em>
