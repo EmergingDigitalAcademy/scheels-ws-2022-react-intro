@@ -20,10 +20,9 @@ The content we will be going over will include:
 
 - React Initialization and JSX
 - Class Components vs Functional Components
-- State
-- Hooks
-- Functional Components
 - Props
+- Hooks
+- State
 - Conditional Rendering
 - List Rendering
 - React Router
