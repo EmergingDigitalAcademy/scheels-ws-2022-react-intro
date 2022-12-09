@@ -73,7 +73,10 @@ export default function FunctionalComponents() {
         return HTML."{" "}
         <em>
           &mdash;{" "}
-          <a href="https://www.w3schools.com/react/react_components.asp">
+          <a
+            href="https://www.w3schools.com/react/react_components.asp"
+            target="_blank"
+          >
             W3 Schools
           </a>
         </em>

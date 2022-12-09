@@ -35,7 +35,10 @@ npm start`;
         <Bem>What is React?</Bem>
         &nbsp; "React is a JavaScript library for building user interfaces."{" "}
         <em>
-          &mdash; <a href="http://reactjs.org">Reactjs.org</a>
+          &mdash;{" "}
+          <a href="http://reactjs.org" target="_blank">
+            Reactjs.org
+          </a>
         </em>
         <br />
         <br />

@@ -1,6 +1,7 @@
 import edaLogo from "./static/eda-logo-purple.png";
 import FunctionalComponents from "./components/02-functional-components";
 import GettingStarted from "./components/01-getting-started";
+import State from "./components/03-state";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div>
           <GettingStarted />
           <FunctionalComponents />
+          <State />
         </div>
       </div>
       <footer>
