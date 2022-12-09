@@ -41,9 +41,10 @@ npm start`;
         <ul>
           <li>
             <em>
-              If you have previously installed <b>create-react-app</b> globally,
-              uninstall the package through npm or yarn first. This is to ensure
-              that npx is always using the latest versions of create-react-app.
+              If you have previously installed <Bem>create-react-app</Bem>{" "}
+              globally, uninstall the package through npm or yarn first. This is
+              to ensure that npx is always using the latest versions of
+              create-react-app.
             </em>
           </li>
         </ul>
@@ -54,20 +55,20 @@ npm start`;
           <ul>
             <em>
               <li>
-                <b>react-dom</b> is what allows us to render components to and
-                manipulate the DOM
+                <Bem>react-dom</Bem> is what allows us to render components to
+                and manipulate the DOM
               </li>
               <li>
-                <b>react-scripts</b> includes many npm scripts for startup,
+                <Bem>react-scripts</Bem> includes many npm scripts for startup,
                 testing, etc.
               </li>
             </em>
           </ul>
         </li>
         <li>
-          Once <b>create-react-app</b> finishes installing, <b>cd</b> into your
-          newly created directory, and run the command <b>npm start</b> to
-          initialize the web server
+          Once <Bem>create-react-app</Bem> finishes installing, <Bem>cd</Bem>{" "}
+          into your newly created directory, and run the command{" "}
+          <Bem>npm start</Bem> to initialize the web server
         </li>
       </ul>
     </div>

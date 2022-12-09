@@ -87,6 +87,17 @@ export default function FunctionalComponents() {
         <li>Work in isolation</li>
         <li>Return HTML</li>
       </ul>
+      <Bem>Some Component Rules:</Bem>
+      <ul>
+        <li>
+          Components{" "}
+          <Bem>have to return valid React Elements (including HTML)</Bem>
+        </li>
+        <li>
+          Components can{" "}
+          <Bem>only return one element (that element can have children)</Bem>
+        </li>
+      </ul>
 
       <hr />
       <br />
