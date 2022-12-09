@@ -3,34 +3,56 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import React, { useState } from "react";
 
 import Bem from "./reused-components/Bem";
+import MyContainer from "./reused-components/MyContainer";
+import MyHeader from "./reused-components/MyHeader";
 
 export default function FunctionalComponents() {
   const [classMountState, setClassMountState] = useState(false);
 
+  const headerText = "Functional vs Class Components";
+
+  const headerBody = (
+    <p>
+      <Bem>What is a component?</Bem>
+      &nbsp; "Components are independent and reusable bits of code. They serve
+      the same purpose as JavaScript Functions, but work in isolation and return
+      HTML."{" "}
+      <em>
+        &mdash;{" "}
+        <a
+          href="https://www.w3schools.com/react/react_components.asp"
+          target="_blank"
+        >
+          W3 Schools
+        </a>
+      </em>
+    </p>
+  );
+
   const classComponentString = `class ClassComponent extends React.Component {
-  render() {
-    return <p>Class inspect me!</p>;
-  }
-}`;
+    render() {
+      return <p>Class inspect me!</p>;
+    }
+  }`;
   const funcComponentString = `function FuncComponent() {
-  return <p>Function inspect me!</p>;
-}`;
+    return <p>Function inspect me!</p>;
+  }`;
 
   const mountExampleString = `class ClassMountExample extends React.Component {
-  this.state = { string: "Hello World" };
-
-  componentDidMount() {
-    console.log(this.state.string);
-  }
-
-  componentWillUnmount() {
-    console.log("I am unmounted");
-  }
-
-  render() {
-    return <p>I will console log 'Hello World' when rendered, and 'I am unmounted' when destroyed!</p>;
-  }
-}`;
+    this.state = { string: "Hello World" };
+  
+    componentDidMount() {
+      console.log(this.state.string);
+    }
+  
+    componentWillUnmount() {
+      console.log("I am unmounted");
+    }
+  
+    render() {
+      return <p>I will console log 'Hello World' when rendered, and 'I am unmounted' when destroyed!</p>;
+    }
+  }`;
 
   class ClassComponent extends React.Component {
     render() {
@@ -63,134 +85,118 @@ export default function FunctionalComponents() {
     }
   }
 
-  return (
-    <div className="container">
-      <h2>Functional vs Class Components</h2>
-      <p>
-        <Bem>What is a component?</Bem>
-        &nbsp; "Components are independent and reusable bits of code. They serve
-        the same purpose as JavaScript Functions, but work in isolation and
-        return HTML."{" "}
-        <em>
-          &mdash;{" "}
-          <a
-            href="https://www.w3schools.com/react/react_components.asp"
-            target="_blank"
-          >
-            W3 Schools
-          </a>
-        </em>
-      </p>
+  const colLeft = (
+    <div>
+      <Bem>Key Concepts:</Bem>
+      <ul>
+        <li>Reusable</li>
+        <li>Work in isolation</li>
+        <li>Return HTML</li>
+      </ul>
 
       <hr />
       <br />
 
-      <div className="colWrapper">
-        <div>
-          <Bem>Key Concepts:</Bem>
-          <ul>
-            <li>Reusable</li>
-            <li>Work in isolation</li>
-            <li>Return HTML</li>
-          </ul>
+      <Bem>Class Components:</Bem>
 
-          <hr />
-          <br />
+      <br />
 
-          <Bem>Class Components:</Bem>
+      <SyntaxHighlighter
+        className="codeHighlight"
+        language="jsx"
+        style={vscDarkPlus}
+      >
+        {classComponentString}
+      </SyntaxHighlighter>
 
-          <br />
+      <Bem>Output:</Bem>
+      <ClassComponent />
 
-          <SyntaxHighlighter
-            className="codeHighlight"
-            language="jsx"
-            style={vscDarkPlus}
-          >
-            {classComponentString}
-          </SyntaxHighlighter>
+      <br />
 
-          <Bem>Output:</Bem>
-          <ClassComponent />
+      <Bem>Functional Components:</Bem>
 
-          <br />
+      <br />
 
-          <Bem>Functional Components:</Bem>
+      <SyntaxHighlighter
+        className="codeHighlight"
+        language="jsx"
+        style={vscDarkPlus}
+      >
+        {funcComponentString}
+      </SyntaxHighlighter>
 
-          <br />
-
-          <SyntaxHighlighter
-            className="codeHighlight"
-            language="jsx"
-            style={vscDarkPlus}
-          >
-            {funcComponentString}
-          </SyntaxHighlighter>
-
-          <Bem>Output:</Bem>
-          <FuncComponent />
-        </div>
-
-        <hr />
-
-        <div>
-          <Bem>So what is the difference?</Bem>
-          <ul>
-            <li>Functional Components require less code</li>
-            <li>
-              Class Components extend from the <Bem>React.Component</Bem>{" "}
-              module, functions are built from nothing
-            </li>
-            <li>Functional Components are stateless</li>
-            <li>
-              Functional Components don't have access to <Bem>setState()</Bem>{" "}
-              and <Bem>lifecycle methods</Bem> (lifecycle methods are extended
-              from <Bem>React.Component</Bem>)
-              <ul>
-                <em>
-                  <li>
-                    Lifecycle methods include; <b>render()</b>,{" "}
-                    <b>constructor()</b>, <b>componentDidMount()</b>,{" "}
-                    <b>componentWillUnmount()</b>, etc.
-                  </li>
-                  <li>
-                    <b>React 16.8</b> introduced us to <b>Hooks</b>, which grant
-                    us a way around these caveats
-                  </li>
-                </em>
-              </ul>
-            </li>
-          </ul>
-
-          <hr />
-          <br />
-
-          <Bem>Class Component Lifecycle Methods:</Bem>
-
-          <br />
-
-          <SyntaxHighlighter
-            className="codeHighlight"
-            language="jsx"
-            style={vscDarkPlus}
-          >
-            {mountExampleString}
-          </SyntaxHighlighter>
-
-          <button onClick={() => setClassMountState(!classMountState)}>
-            {classMountState ? "Unmount Component" : "Mount Component"}
-          </button>
-
-          <br />
-          <br />
-
-          {classMountState && (
-            <>
-              <Bem>Output:</Bem>
-              <ClassMountExample />
-            </>
-          )}
-        </div>
-      </div>
+      <Bem>Output:</Bem>
+      <FuncComponent />
     </div>
+  );
+
+  const colRight = (
+    <div>
+      <Bem>So what is the difference?</Bem>
+      <ul>
+        <li>Functional Components require less code</li>
+        <li>
+          Class Components extend from the <Bem>React.Component</Bem> module,
+          functions are built from nothing
+        </li>
+        <li>Functional Components are stateless</li>
+        <li>
+          Functional Components don't have access to <Bem>setState()</Bem> and{" "}
+          <Bem>lifecycle methods</Bem> (lifecycle methods are extended from{" "}
+          <Bem>React.Component</Bem>)
+          <ul>
+            <em>
+              <li>
+                Lifecycle methods include; <b>render()</b>, <b>constructor()</b>
+                , <b>componentDidMount()</b>, <b>componentWillUnmount()</b>,
+                etc.
+              </li>
+              <li>
+                <b>React 16.8</b> introduced us to <b>Hooks</b>, which grant us
+                a way around these caveats
+              </li>
+            </em>
+          </ul>
+        </li>
+      </ul>
+
+      <hr />
+      <br />
+
+      <Bem>Class Component Lifecycle Methods:</Bem>
+
+      <br />
+
+      <SyntaxHighlighter
+        className="codeHighlight"
+        language="jsx"
+        style={vscDarkPlus}
+      >
+        {mountExampleString}
+      </SyntaxHighlighter>
+
+      <button onClick={() => setClassMountState(!classMountState)}>
+        {classMountState ? "Unmount Component" : "Mount Component"}
+      </button>
+
+      <br />
+      <br />
+
+      {classMountState && (
+        <>
+          <Bem>Output:</Bem>
+          <ClassMountExample />
+        </>
+      )}
+    </div>
+  );
+
+  return (
+    <MyContainer
+      myHeader={<MyHeader headerText={headerText} headerBody={headerBody} />}
+      colLeft={colLeft}
+      colRight={colRight}
+    />
   );
 }
