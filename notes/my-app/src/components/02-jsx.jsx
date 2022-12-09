@@ -80,16 +80,17 @@ export default function Jsx() {
 
   const colRight = (
     <div>
+      <Bem>Examples of JSX:</Bem>
+      <br />
+      <SyntaxHighlighter
+        className="codeHighlight"
+        language="jsx"
+        style={vscDarkPlus}
+      >
+        {jsxVariableExample}
+      </SyntaxHighlighter>
+
       <p>
-        <Bem>Examples of JSX:</Bem>
-        <br />
-        <SyntaxHighlighter
-          className="codeHighlight"
-          language="jsx"
-          style={vscDarkPlus}
-        >
-          {jsxVariableExample}
-        </SyntaxHighlighter>
         This example declares a string in a new <Bem>functional component,</Bem>{" "}
         renders a <Bem>&lt;p&gt;</Bem> element, and inserts the declared string
         as a child of the <Bem>&lt;p&gt;</Bem> element by wrapping the variable
