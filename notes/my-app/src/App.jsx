@@ -1,7 +1,8 @@
 import edaLogo from "./static/eda-logo-purple.png";
-import FunctionalComponents from "./components/02-functional-components";
 import GettingStarted from "./components/01-getting-started";
-import State from "./components/03-state";
+import Jsx from "./components/02-jsx";
+import FunctionalComponents from "./components/03-functional-components";
+import State from "./components/04-state";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </header>
         <div>
           <GettingStarted />
+          <Jsx />
           <FunctionalComponents />
           <State />
         </div>

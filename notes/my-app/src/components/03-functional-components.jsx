@@ -4,30 +4,9 @@ import React, { useState } from "react";
 
 import Bem from "./reused-components/Bem";
 import MyContainer from "./reused-components/MyContainer";
-import MyHeader from "./reused-components/MyHeader";
 
 export default function FunctionalComponents() {
   const [classMountState, setClassMountState] = useState(false);
-
-  const headerText = "Functional vs Class Components";
-
-  const headerBody = (
-    <p>
-      <Bem>What is a component?</Bem>
-      &nbsp; "Components are independent and reusable bits of code. They serve
-      the same purpose as JavaScript Functions, but work in isolation and return
-      HTML."{" "}
-      <em>
-        &mdash;{" "}
-        <a
-          href="https://www.w3schools.com/react/react_components.asp"
-          target="_blank"
-        >
-          W3 Schools
-        </a>
-      </em>
-    </p>
-  );
 
   const classComponentString = `class ClassComponent extends React.Component {
     render() {
@@ -87,6 +66,21 @@ export default function FunctionalComponents() {
 
   const colLeft = (
     <div>
+      <Bem>What is a component?</Bem>
+      <p>
+        "Components are independent and reusable bits of code. They serve the
+        same purpose as JavaScript Functions, but work in isolation and return
+        HTML."{" "}
+        <em>
+          &mdash;{" "}
+          <a
+            href="https://www.w3schools.com/react/react_components.asp"
+            target="_blank"
+          >
+            W3 Schools
+          </a>
+        </em>
+      </p>
       <Bem>Key Concepts:</Bem>
       <ul>
         <li>Reusable</li>
@@ -194,7 +188,7 @@ export default function FunctionalComponents() {
 
   return (
     <MyContainer
-      myHeader={<MyHeader headerText={headerText} headerBody={headerBody} />}
+      headerText="Functional vs Class Components"
       colLeft={colLeft}
       colRight={colRight}
     />

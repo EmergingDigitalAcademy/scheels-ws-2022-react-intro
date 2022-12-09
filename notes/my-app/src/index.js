@@ -5,6 +5,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  // Why is the commented out?
   // <React.StrictMode>
   <App />
   // </React.StrictMode>

@@ -1,7 +1,7 @@
-export default function MyContainer({ myHeader, colLeft, colRight }) {
+export default function MyContainer({ headerText, colLeft, colRight }) {
   return (
     <div className="container">
-      {myHeader}
+      <h2>{headerText}</h2>
 
       <hr />
       <br />

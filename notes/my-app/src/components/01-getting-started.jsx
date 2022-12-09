@@ -2,56 +2,35 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import Bem from "./reused-components/Bem";
-import MyHeader from "./reused-components/MyHeader";
 import MyContainer from "./reused-components/MyContainer";
 
 export default function GettingStarted() {
-  const headerText = "Getting Started with React";
-
-  const headerBody = (
-    <p>
-      <Bem>What is React?</Bem>
-      &nbsp; "React is a JavaScript library for building user interfaces."{" "}
-      <em>
-        &mdash;{" "}
-        <a href="https://reactjs.org/docs/getting-started.html" target="_blank">
-          Reactjs.org
-        </a>
-      </em>
-      <br />
-      <br />
-      <Bem>React</Bem> is an open source project built by <Bem>Facebook</Bem>{" "}
-      that allows us to create <Bem>simple, fast,</Bem> and{" "}
-      <Bem>responsive</Bem> UIs.
-    </p>
-  );
-
   const terminalCommandsString = `npx create-react-app my-app
 cd my-app
 npm start`;
 
-  const jsxStatement = `const element = <p>Hello World</p>;`;
-
-  const jsxVariableExample = `function JsxVariable() {
-  const string = "Hello World";
-
-  return (
-    <p>{string}</p>;
-  )
-}`;
-
-  const jsxConditionExample = `function JsxCondition() {
-  const bool = true;
-
-  if (bool) {
-    return <p>This</p>
-  } else {
-    return <p>That</p>
-  }
-}`;
-
   const colLeft = (
     <div>
+      <Bem>What is React?</Bem>
+      <p>
+        "React is a JavaScript library for building user interfaces."{" "}
+        <em>
+          &mdash;{" "}
+          <a
+            href="https://reactjs.org/docs/getting-started.html"
+            target="_blank"
+          >
+            ReactJs.org
+          </a>
+        </em>
+        <br />
+        <br />
+        <Bem>React</Bem> is an open source project built by <Bem>Facebook</Bem>{" "}
+        that allows us to create <Bem>simple, fast,</Bem> and{" "}
+        <Bem>responsive</Bem> UIs.
+      </p>
+      <hr />
+      <br />
       <Bem>React Initialization</Bem>
 
       <ul>
@@ -91,10 +70,11 @@ npm start`;
           initialize the web server
         </li>
       </ul>
+    </div>
+  );
 
-      <hr />
-      <br />
-
+  const colRight = (
+    <div>
       <Bem>Terminal Commands:</Bem>
 
       <br />
@@ -109,100 +89,9 @@ npm start`;
     </div>
   );
 
-  const colRight = (
-    <div>
-      <Bem>JSX</Bem>
-      <p>
-        Take a moment to consider this statement and think about what is going
-        on:
-      </p>
-
-      <SyntaxHighlighter
-        className="codeHighlight"
-        language="jsx"
-        style={vscDarkPlus}
-      >
-        {jsxStatement}
-      </SyntaxHighlighter>
-
-      <p>
-        Is this <Bem>JavaScript?</Bem> Is this <Bem>HTML?</Bem> It's actually
-        neither!
-        <br />
-        <br />
-        This is called <Bem>JSX</Bem>, and it stands for{" "}
-        <Bem>JavaScript-XML. JSX</Bem> may remind you of a templating language,
-        but it is actually a syntax extension for <Bem>JavaScript!</Bem>
-        <br />
-        <br />
-        You don't <em>have</em> to use <Bem>JSX</Bem> while developing in{" "}
-        <Bem>React</Bem> as <Bem>React</Bem> can fully read{" "}
-        <Bem>JavaScript</Bem> by itself, but it is strongly recommended when
-        building UIs.
-      </p>
-
-      <hr />
-      <br />
-
-      <Bem>Why use JSX?</Bem>
-
-      <p>
-        Instead of separating markup and logic languages into separate files,{" "}
-        <Bem>React</Bem> gives us a handy tool that combines the two. Many find{" "}
-        <Bem>JSX</Bem> to be a helpful <Bem>visual aid</Bem> when building UIs,
-        and also provides us with more <Bem>robust error handling.</Bem>
-      </p>
-
-      <hr />
-      <br />
-
-      <Bem>Examples of JSX:</Bem>
-
-      <br />
-
-      <SyntaxHighlighter
-        className="codeHighlight"
-        language="jsx"
-        style={vscDarkPlus}
-      >
-        {jsxVariableExample}
-      </SyntaxHighlighter>
-
-      <p>
-        This example declares a string in a new <Bem>functional component,</Bem>{" "}
-        renders a <Bem>&lt;p&gt;</Bem> element, and inserts the declared string
-        as a child of the <Bem>&lt;p&gt;</Bem> element by wrapping the variable
-        in curly braces ( <Bem>&#123; &#125;</Bem> ).
-        <br />
-        <br />
-        You can put <Bem>any valid JavaScript expression</Bem> inside of curly
-        braces in <Bem>JSX.</Bem>
-      </p>
-
-      <SyntaxHighlighter
-        className="codeHighlight"
-        language="jsx"
-        style={vscDarkPlus}
-      >
-        {jsxConditionExample}
-      </SyntaxHighlighter>
-
-      <p>
-        <Bem>JSX</Bem> is also considered <Bem>valid JavaScript!</Bem>
-        <br />
-        <br />
-        This example declares a boolean in a new{" "}
-        <Bem>functional component,</Bem> initializes a conditional based on the
-        bool variable, and renders a <Bem>&lt;p&gt;</Bem> element with the text
-        of <Bem>This</Bem> or <Bem>That</Bem> based on the result of the
-        condition.
-      </p>
-    </div>
-  );
-
   return (
     <MyContainer
-      myHeader={<MyHeader headerText={headerText} headerBody={headerBody} />}
+      headerText="Getting Started with React"
       colLeft={colLeft}
       colRight={colRight}
     />
