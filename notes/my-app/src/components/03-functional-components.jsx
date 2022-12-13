@@ -97,6 +97,10 @@ export default function FunctionalComponents() {
           Components can{" "}
           <Bem>only return one element (that element can have children)</Bem>
         </li>
+        <li>
+          Components follow the{" "}
+          <Bem>Pascal Case Variable Naming Convention</Bem>
+        </li>
       </ul>
 
       <hr />
@@ -194,6 +198,12 @@ export default function FunctionalComponents() {
           <ClassMountExample />
         </>
       )}
+
+      <br />
+      <Bem>
+        From this point forward, we will be only be talking about functional
+        components with reference to class components.
+      </Bem>
     </div>
   );
 

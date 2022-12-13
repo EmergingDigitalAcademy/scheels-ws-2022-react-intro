@@ -28,7 +28,6 @@ export default function Jsx() {
   const colLeft = (
     <div>
       <Bem>What is JSX?</Bem>
-
       <p>
         "JSX is a syntax extension for JavaScript."{" "}
         <em>
@@ -44,13 +43,16 @@ export default function Jsx() {
         <br />
         Take a moment to consider this statement and think about what is going
         on:
-        <SyntaxHighlighter
-          className="codeHighlight"
-          language="jsx"
-          style={vscDarkPlus}
-        >
-          {jsxStatement}
-        </SyntaxHighlighter>
+      </p>
+      <SyntaxHighlighter
+        className="codeHighlight"
+        language="jsx"
+        style={vscDarkPlus}
+      >
+        {jsxStatement}
+      </SyntaxHighlighter>
+
+      <p>
         Is this <Bem>JavaScript?</Bem> Is this <Bem>HTML?</Bem> This is actually{" "}
         <Bem>JSX!</Bem>
         <br />
@@ -59,10 +61,8 @@ export default function Jsx() {
         of a templating language, that's because it follows the idea that{" "}
         <Bem>rendering logic is inherently coupled with other UI logic.</Bem>
       </p>
-
       <hr />
       <br />
-
       <Bem>Why use JSX?</Bem>
       <p>
         Instead of separating markup and logic languages into separate files,{" "}
@@ -89,7 +89,6 @@ export default function Jsx() {
       >
         {jsxVariableExample}
       </SyntaxHighlighter>
-
       <p>
         This example declares a string in a new <Bem>functional component,</Bem>{" "}
         renders a <Bem>&lt;p&gt;</Bem> element, and inserts the declared string
@@ -99,18 +98,17 @@ export default function Jsx() {
         <br />
         You can put <Bem>any valid JavaScript expression</Bem> inside of curly
         braces in <Bem>JSX.</Bem>
-        <br />
-        <br />
-        <SyntaxHighlighter
-          className="codeHighlight"
-          language="jsx"
-          style={vscDarkPlus}
-        >
-          {jsxConditionExample}
-        </SyntaxHighlighter>
-        <Bem>JSX</Bem> is also considered <Bem>valid JavaScript!</Bem>
-        <br />
-        <br />
+      </p>
+      <br />
+      <SyntaxHighlighter
+        className="codeHighlight"
+        language="jsx"
+        style={vscDarkPlus}
+      >
+        {jsxConditionExample}
+      </SyntaxHighlighter>
+      <Bem>JSX</Bem> is also considered <Bem>valid JavaScript!</Bem>
+      <p>
         This example declares a boolean in a new{" "}
         <Bem>functional component,</Bem> initializes a conditional based on the
         bool variable, and renders a <Bem>&lt;p&gt;</Bem> element with the text
