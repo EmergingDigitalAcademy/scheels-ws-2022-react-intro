@@ -3,6 +3,7 @@ import GettingStarted from "./components/01-getting-started";
 import Jsx from "./components/02-jsx";
 import FunctionalComponents from "./components/03-functional-components";
 import State from "./components/04-state";
+import Props from "./components/05-props";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Jsx />
           <FunctionalComponents />
           <State />
+          <Props />
         </div>
       </div>
       <footer>
