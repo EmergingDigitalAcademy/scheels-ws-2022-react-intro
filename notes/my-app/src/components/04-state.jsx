@@ -161,13 +161,13 @@ function State() {
             <ul>
               <li>
                 Use the <b>useState()</b> hook to initialize a new piece of
-                state with the initial state of <b>int: 0</b>
+                state with the initial state of the integer <b>0</b>
               </li>
               <li>
                 <b>Render two buttons</b>, a button that will{" "}
                 <b>increment state by 1</b>, a button that will{" "}
                 <b>decrement state by 1</b>, a <b>paragraph element</b> that{" "}
-                <b>renders the state</b>
+                <b>renders the state of your new component</b>
               </li>
             </ul>
           </em>
