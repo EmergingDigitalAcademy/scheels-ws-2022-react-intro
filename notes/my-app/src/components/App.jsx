@@ -1,13 +1,13 @@
-import edaLogo from "./static/eda-logo-purple.png";
-import GettingStarted from "./components/01-getting-started";
-import Jsx from "./components/02-jsx";
-import FunctionalComponents from "./components/03-functional-components";
-import State from "./components/04-state";
-import Props from "./components/05-props";
-import Hooks from "./components/06-hooks";
-import ConditionalRendering from "./components/07-conditional-rendering";
-import ListRendering from "./components/08-list-rendering";
-import ReactRouter from "./components/09-react-router";
+import edaLogo from "../static/eda-logo-purple.png";
+import GettingStarted from "./01-getting-started";
+import Jsx from "./02-jsx";
+import FunctionalComponents from "./03-functional-components";
+import State from "./04-state";
+import Props from "./05-props";
+import Hooks from "./06-hooks";
+import ConditionalRendering from "./07-conditional-rendering";
+import ListRendering from "./08-list-rendering";
+import ReactRouter from "./09-react-router";
 
 function App() {
   return (
