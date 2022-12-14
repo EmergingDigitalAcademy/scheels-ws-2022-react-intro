@@ -32,7 +32,7 @@ We will wrap up the workshop by taking everything learned and combining it with 
 
 ## Repo Tour
 
-To render each component, `cd` into the `my-app` folder, import and call the component you'd like to work on, and finally, run the command `npm start` to start the web server.
+To render each component, `cd` into the `my-app` folder, import and call the component you'd like to work on in the `App.jsx` file, and finally, run the command `npm start` to start the web server.
 
 - `./notes`:
   - Inside you will find a folder for each module of the workshop that we will be covering
