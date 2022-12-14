@@ -28,7 +28,7 @@ The content we will be going over will include:
 - List Rendering
 - React Router
 
-We will wrap up the workshop by taking everything learned and combining it with create-react-app to build an E-Commerce Single Page Application (SPA)!
+We will wrap up the workshop by taking everything learned and combining it with create-react-app to build a Task Management Single Page Application (SPA)!
 
 ## Repo Tour
 

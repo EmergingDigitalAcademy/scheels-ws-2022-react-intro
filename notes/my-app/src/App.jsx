@@ -4,6 +4,10 @@ import Jsx from "./components/02-jsx";
 import FunctionalComponents from "./components/03-functional-components";
 import State from "./components/04-state";
 import Props from "./components/05-props";
+import Hooks from "./components/06-hooks copy 3";
+import ConditionalRendering from "./components/07-conditional-rendering";
+import ListRendering from "./components/08-list-rendering";
+import ReactRouter from "./components/09-react-router";
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
           <FunctionalComponents />
           <State />
           <Props />
+          <Hooks />
+          <ConditionalRendering />
+          <ListRendering />
+          <ReactRouter />
         </div>
       </div>
       <footer>
