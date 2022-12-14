@@ -5,9 +5,9 @@ import Bem from "./reused-components/Bem";
 import MyContainer from "./reused-components/MyContainer";
 
 export default function Jsx() {
-  const jsxStatement = `const element = <p>Hello World</p>;`;
+  const jsxStatement = `  const element = <p>Hello World</p>;`;
 
-  const jsxVariableExample = `function JsxVariable() {
+  const jsxVariableExample = `  function JsxVariable() {
     const string = "Hello World";
   
     return (
@@ -15,7 +15,7 @@ export default function Jsx() {
     )
   }`;
 
-  const jsxConditionExample = `function JsxCondition() {
+  const jsxConditionExample = ` function JsxCondition() {
     const bool = true;
   
     if (bool) {
@@ -32,10 +32,7 @@ export default function Jsx() {
         "JSX is a syntax extension for JavaScript."{" "}
         <em>
           &mdash;{" "}
-          <a
-            href="https://reactjs.org/docs/introducing-jsx.html"
-            target="_blank"
-          >
+          <a href="https://reactjs.org/docs/introducing-jsx.html">
             ReactJs.org
           </a>
         </em>

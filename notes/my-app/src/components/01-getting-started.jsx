@@ -5,9 +5,9 @@ import Bem from "./reused-components/Bem";
 import MyContainer from "./reused-components/MyContainer";
 
 export default function GettingStarted() {
-  const terminalCommandsString = `npx create-react-app my-app
-cd my-app
-npm start`;
+  const terminalCommandsString = `  npx create-react-app my-app
+  cd my-app
+  npm start`;
 
   const colLeft = (
     <div>
@@ -16,10 +16,7 @@ npm start`;
         "React is a JavaScript library for building user interfaces."{" "}
         <em>
           &mdash;{" "}
-          <a
-            href="https://reactjs.org/docs/getting-started.html"
-            target="_blank"
-          >
+          <a href="https://reactjs.org/docs/getting-started.html">
             ReactJs.org
           </a>
         </em>

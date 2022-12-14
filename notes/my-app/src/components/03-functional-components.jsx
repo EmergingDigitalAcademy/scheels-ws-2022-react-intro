@@ -73,10 +73,7 @@ export default function FunctionalComponents() {
         HTML."{" "}
         <em>
           &mdash;{" "}
-          <a
-            href="https://www.w3schools.com/react/react_components.asp"
-            target="_blank"
-          >
+          <a href="https://www.w3schools.com/react/react_components.asp">
             W3 Schools
           </a>
         </em>
@@ -90,16 +87,16 @@ export default function FunctionalComponents() {
       <Bem>Some Component Rules:</Bem>
       <ul>
         <li>
-          Components{" "}
-          <Bem>have to return valid React Elements (including HTML)</Bem>
+          Components follow the{" "}
+          <Bem>Pascal Case Variable Naming Convention</Bem>
         </li>
         <li>
           Components can{" "}
           <Bem>only return one element (that element can have children)</Bem>
         </li>
         <li>
-          Components follow the{" "}
-          <Bem>Pascal Case Variable Naming Convention</Bem>
+          Components{" "}
+          <Bem>have to return valid React Elements (including HTML)</Bem>
         </li>
       </ul>
 
