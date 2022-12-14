@@ -42,14 +42,14 @@ To render each component, `cd` into the `my-app` folder, import and call the com
       - The files that you edit when you are building a react app
       - `./notes/my-app/src/components`:
         - All of the notes that will be presented during the workshop
+        - `./notes/my-app/src/components/App.jsx`:
+          - The root file for the React application
         - `./notes/my-app/src/components/reused-components`:
           - Custom components that are shared across the application
       - `./notes/my-app/src/static`:
         - Static files including CSS and images
       - `./notes/my-app/src/index.js`:
         - The root file of our project
-      - `./notes/my-app/src/App.jsx`:
-        - The root file for the React application
 - `./project` (solution branch only):
   - The code to reference during the building portion of the workshop
 - `./.gitignore`:
