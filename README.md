@@ -21,9 +21,9 @@ The content we will be going over will include:
 - React Getting Started
 - JSX
 - Class Components vs Functional Components
+- Hooks
 - State
 - Props
-- Hooks
 - Conditional Rendering
 - List Rendering
 - React Router

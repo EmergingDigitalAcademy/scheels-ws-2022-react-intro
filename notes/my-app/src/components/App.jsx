@@ -2,9 +2,9 @@ import edaLogo from "../static/eda-logo-purple.png";
 import GettingStarted from "./01-getting-started";
 import Jsx from "./02-jsx";
 import FunctionalComponents from "./03-functional-components";
-import State from "./04-state";
-import Props from "./05-props";
-import Hooks from "./06-hooks";
+import Hooks from "./04-hooks";
+import State from "./05-state";
+import Props from "./06-props";
 import ConditionalRendering from "./07-conditional-rendering";
 import ListRendering from "./08-list-rendering";
 import ReactRouter from "./09-react-router";
@@ -21,9 +21,9 @@ function App() {
           <GettingStarted />
           <Jsx />
           <FunctionalComponents />
+          <Hooks />
           <State />
           <Props />
-          <Hooks />
           <ConditionalRendering />
           <ListRendering />
           <ReactRouter />
