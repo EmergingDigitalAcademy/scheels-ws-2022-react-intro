@@ -54,7 +54,7 @@ export default function Hooks() {
         <br />
         React comes with many hooks for us to use, or we can even create our
         own, but the most commonly used hooks are <Bem>useState()</Bem> and{" "}
-        <Bem>useEffect.()</Bem>
+        <Bem>useEffect().</Bem>
       </p>
 
       <hr />
