@@ -33,7 +33,7 @@ export default function ListRendering() {
         method.
         <br />
         <br />
-        It is <Bem>extremely important when you are rendering a list</Bem>in
+        It is <Bem>extremely important when you are rendering a list</Bem> in
         react to <Bem>include a key attribute</Bem> on the elements you are
         rendering. <Bem>Keys help react identify elements</Bem> that are
         rendered out of a map.
