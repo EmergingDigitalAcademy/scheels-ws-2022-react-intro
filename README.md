@@ -26,7 +26,6 @@ The content we will be going over will include:
 - Props
 - Conditional Rendering
 - List Rendering
-- React Router
 
 We will wrap up the workshop by taking everything learned and combining it with create-react-app to build a Task Management Single Page Application (SPA)!
 

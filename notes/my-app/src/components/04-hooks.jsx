@@ -45,9 +45,11 @@ export default function Hooks() {
         <a href="https://reactjs.org/docs/hooks-intro.html#motivation">
           found here.
         </a>{" "}
-        In short, by introducing functional components to state, they are moving
-        away from class components, a more cumbersome and confusing way to
-        develop.
+        In short, by introducing functional components to state,{" "}
+        <Bem>
+          they are moving away from class components, a more cumbersome and
+          confusing way to develop.
+        </Bem>
         <br />
         <br />
         React comes with many hooks for us to use, or we can even create our
@@ -66,12 +68,18 @@ export default function Hooks() {
           <em>
             <ul>
               <li>
-                By following this rule, you ensure that Hooks are called int he
-                same order each time a component renders
+                By following this rule, you ensure that{" "}
+                <b>
+                  Hooks are called in the same order each time a component
+                  renders
+                </b>
               </li>
               <li>
-                This allows React to properly preserve the state of Hooks
-                between multiple useState() and useEffect() calls
+                <b>
+                  This allows React to properly preserve the state of Hooks
+                  between multiple
+                </b>{" "}
+                useState() and useEffect() <b>calls</b>
               </li>
             </ul>
           </em>
@@ -81,10 +89,15 @@ export default function Hooks() {
           hooks from regular JavaScript functions
           <em>
             <ul>
-              <li>You CAN call Hooks from Hooks you create</li>
               <li>
-                By following this rule, you ensure that all stateful logic in a
-                component is clearly visible from its source code
+                You <b>CAN</b> call Hooks from Hooks you create
+              </li>
+              <li>
+                By following this rule, you ensure that{" "}
+                <b>
+                  all stateful logic in a component is clearly visible from its
+                  source code
+                </b>
               </li>
             </ul>
           </em>
@@ -94,18 +107,25 @@ export default function Hooks() {
       <br />
       <Bem>useState()</Bem>
       <p>
-        The useState() Hook will add a local piece of state to the functional
-        component that it is declared in, and React will preserve this piece of
-        state between renders. The function itself will return a pair, the
-        current state, and a function that lets you update state. The only
-        argument that is passed to useState() is an initial piece of state. The
-        initial piece of state is only used during the first render.
+        The <Bem>useState()</Bem> Hook will{" "}
+        <Bem>
+          add a local piece of state to the functional component that it is
+          declared in, and React will preserve
+        </Bem>{" "}
+        this piece of state <Bem>between renders.</Bem> The function itself will{" "}
+        <Bem>
+          return a pair, the current state, and a function that lets you update
+          state.
+        </Bem>{" "}
+        The <Bem>only argument</Bem> that is passed to <Bem>useState()</Bem> is
+        an <Bem>initial piece of state. </Bem> The initial piece of state is
+        only used during the first render.
         <br />
         <br />
-        The function to update state that useState() will return is similar to
-        this.setState in class components, except it doesn't merge state
-        together. Unlike this.state, useState() accepts more than just an
-        object.
+        The <Bem>function to update state</Bem> that <Bem>useState()</Bem> will
+        return is <Bem>similar to this.setState</Bem> in class components,
+        except it <Bem>doesn't merge state</Bem> together. Unlike this.state,{" "}
+        <Bem>useState() accepts more than just an object.</Bem>
       </p>
       <SyntaxHighlighter
         className="codeHighlight"
@@ -120,30 +140,42 @@ export default function Hooks() {
     <div>
       <Bem>useEffect()</Bem>
       <p>
-        The useEffect() hook allows us to fire off logic after certain events
-        happen throughout the lifecycle like subscriptions or data fetching, or
-        in other words, perform a side effect. useEffect accepts a required
-        argument and an optional argument. The required argument is a callback
-        function, or the logic that you want to perform after an event happens.
-        The second, optional argument is a dependency array that allows us to
+        The <Bem>useEffect()</Bem> hook allows us to{" "}
+        <Bem>
+          fire off logic after certain events happen throughout the lifecycle,
+        </Bem>{" "}
+        like subscriptions or data fetching, or in other words,{" "}
+        <Bem>perform a side effect.</Bem> <Bem>useEffect()</Bem> accepts a
+        required argument and an optional argument. The{" "}
+        <Bem>required argument is a callback function,</Bem> or the logic that
+        you want to perform after an event happens. The second,{" "}
+        <Bem>optional argument is a dependency array</Bem> that allows us to
         conditionally fire events based off of a value.
         <br />
         <br />
-        useEffect() allows us to perform actions similar to componentDidMount(),
-        componentDidUpdate(), and componentWillUnmount() from our functional
-        components. To achieve functionality similar to componentWillUnmount(),
-        we must include a function in the return of the callback function
-        provided to useEffect() that will be fired when the component is
-        unmounted from the DOM.
+        <Bem>useEffect()</Bem> allows us to perform actions{" "}
+        <Bem>
+          similar to componentDidMount(), componentDidUpdate(), and
+          componentWillUnmount()
+        </Bem>{" "}
+        from our functional components, <Bem>all from the same API.</Bem> To
+        achieve <Bem>functionality similar to componentWillUnmount(),</Bem> we
+        must{" "}
+        <Bem>include a function in the return of the callback function</Bem>{" "}
+        provided to <Bem>useEffect()</Bem> that will be fired when the component
+        is unmounted from the DOM.
         <br />
         <br />
-        Including or not including the dependency array in a useEffect()
-        statement is a very important decision. Without it, the useEffect() will
-        fire after every single render of the component. Including the
-        dependency array will make it so the useEffect() will only fire after
-        the first rendering of the component. And finally, including values
-        inside of a dependency array will cause the effect to fire when react
-        detects a change in value of that variable.
+        <Bem>Including or not including</Bem> the <Bem>dependency array</Bem> in
+        a <Bem>useEffect()</Bem> statement is a{" "}
+        <Bem>very important decision. Without it,</Bem> the{" "}
+        <Bem>useEffect()</Bem> will <Bem>fire after every single render</Bem> of
+        the component. <Bem>Including the dependency array</Bem> will make it so
+        the <Bem>useEffect()</Bem> will{" "}
+        <Bem>only fire after the first rendering</Bem> of the component. And
+        finally, <Bem>including values</Bem> inside of a dependency array will
+        cause the effect to{" "}
+        <Bem>fire when react detects a change in value of</Bem> that variable.
       </p>
       <SyntaxHighlighter
         className="codeHighlight"

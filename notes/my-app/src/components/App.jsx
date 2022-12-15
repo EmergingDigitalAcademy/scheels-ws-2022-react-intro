@@ -7,7 +7,6 @@ import State from "./05-state";
 import Props from "./06-props";
 import ConditionalRendering from "./07-conditional-rendering";
 import ListRendering from "./08-list-rendering";
-import ReactRouter from "./09-react-router";
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
           <Props />
           <ConditionalRendering />
           <ListRendering />
-          <ReactRouter />
         </div>
       </div>
       <footer>
