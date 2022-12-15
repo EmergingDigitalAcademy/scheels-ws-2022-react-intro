@@ -64,7 +64,7 @@ export default function Props() {
         element. The second component that we are rendering is a{" "}
         <Bem>component called Parent</Bem> that will{" "}
         <Bem>render the Child component,</Bem> and{" "}
-        <Bem>pass in a value through an attributer</Bem> with the name of
+        <Bem>pass in a value through an attribute</Bem> with the name of
         string.
       </p>
     </div>
