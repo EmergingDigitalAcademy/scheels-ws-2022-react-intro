@@ -114,9 +114,9 @@ export default function Props() {
       </ul>
       <hr />
       <br />
-      {/* ~~~~~~~ Render your component here ~~~~~~~~~ */}
+      {/* ~~~~~~~ Render your components here ~~~~~~~~~ */}
 
-      {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+      {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
     </div>
   );
 

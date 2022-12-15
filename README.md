@@ -49,8 +49,6 @@ To render each component, `cd` into the `my-app` folder, import and call the com
         - Static files including CSS and images
       - `./notes/my-app/src/index.js`:
         - The root file of our project
-- `./project` (solution branch only):
-  - The code to reference during the building portion of the workshop
 - `./.gitignore`:
   - Hiding node_modules and package-lock files from git
 - `./README.md`:
